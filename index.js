@@ -14,9 +14,12 @@ function navAnimation(val1, val2) {
   });
 }
 
+
+var overlayElem = document.getElementsByClassName('overlay')[0]
 function toggleNav() {
   // Toggle: Hamburger Open/Close
   hamburgerMenu.classList.toggle("active");
+  overlayElem.style.transition  = '0.8s ease-in-out';
 
   //   Toggle: Menu Active
   overlay.classList.toggle("overlay-active");
@@ -41,22 +44,3 @@ hamburgerMenu.addEventListener("click", toggleNav);
 navItems.forEach((nav) => {
   nav.addEventListener("click", toggleNav);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
